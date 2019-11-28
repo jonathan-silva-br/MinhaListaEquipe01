@@ -1,19 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/buttonadd"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:scrollbarThumbHorizontal="@color/colorPrimary"
+        android:text="Adicionar novo Produto"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:text="Adicionar Produto a Lista"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonadd" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="294dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="44dp"
+        android:text="Pepsi lata 350ml - R$ 4,00"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="294dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="44dp"
+        android:text="Feijão Preto  1kg - R$ 5,00"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="294dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="40dp"
+        android:text="Arroz Integral Urbano 1kg - R$ 3,50"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="294dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="43dp"
+        android:text="Macarrão ISABELLA 500g - R$3,50 "
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="95dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:srcCompat="@drawable/arroz" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="95dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="96dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/feijao" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="95dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:srcCompat="@drawable/macarrao" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="294dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="48dp"
+        android:text="Açúcar Refinado UNIÃO  1kg - R$ 3,00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="294dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="48dp"
+        android:text=" Nescau 2.0 800g - R$ 12,00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="294dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="56dp"
+        android:text="Lasanha Sadia Bolonhesa 600g - R$12,00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="95dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+        app:srcCompat="@drawable/acucar" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="95dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+        app:srcCompat="@drawable/nescau" />
+
+    <CheckBox
+        android:id="@+id/checkBox8"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="32dp"
+        android:text="Creme de Avelã Nutella 650g - R$29,00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="95dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton7"
+        app:srcCompat="@drawable/las" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="95dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton11"
+        app:srcCompat="@drawable/nutella" />
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="95dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/peps" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
