@@ -19,21 +19,11 @@ public class HomeFragment extends Fragment {
     int Clicado;
     Button add;
 
-    private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.buttonadd);
-        homeViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
 
-        });
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
         return root;
-    }
+  }
 }
