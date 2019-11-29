@@ -8,11 +8,11 @@
 
     <Button
         android:id="@+id/buttonadd"
-        android:layout_width="165dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="116dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="12dp"
         android:background="@color/colorPrimary"
         android:scrollbarThumbHorizontal="@color/colorPrimary"
         android:text="Adicionar novo Produto"
@@ -22,10 +22,10 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="165dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
+        android:layout_width="116dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
         android:layout_marginBottom="16dp"
         android:background="@color/colorPrimary"
         android:text="Adicionar Produto a Lista"
