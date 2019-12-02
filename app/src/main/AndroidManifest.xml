@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".CadastrarProdutos"
-            android:label="@string/title_activity_cadastrar_produtos"
+            android:name=".NovosProdutos"
+            android:label="@string/title_activity_novos_produtos"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".NovoProduto"
-            android:label="@string/title_activity_novo_produto"
+            android:name=".CadastrarProdutos"
+            android:label="@string/title_activity_cadastrar_produtos"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"

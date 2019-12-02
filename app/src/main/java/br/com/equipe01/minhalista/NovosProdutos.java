@@ -10,15 +10,18 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
-public class NovoProduto extends AppCompatActivity {
+public class NovosProdutos extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastrar_produtos);
+        setContentView(R.layout.activity_novos_produtos);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        int i = getIntent().getIntExtra("clicado", 0);
 
-    }
 
-}
+            }
+        }
+
+
