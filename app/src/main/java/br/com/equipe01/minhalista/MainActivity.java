@@ -1,5 +1,7 @@
 package br.com.equipe01.minhalista;
 
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,8 +22,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
+    AnimationDrawable rocketAnimation;
+
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -59,4 +65,16 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+    public void animacaoBtn(View view) {
+        ImageView buttonAdd = (ImageView) findViewById(R.id.buttonadd);
+        buttonAdd.setBackgroundResource(R.drawable.animbutton);
+        rocketAnimation = (AnimationDrawable) buttonAdd.getBackground();
+
+    }
+
+
+
+
 }
