@@ -16,4 +16,5 @@
     <string name="title_activity_novo_produto">NovoProduto</string>
     <string name="title_activity_cadastrar_produtos">CadastrarProdutos</string>
     <string name="title_activity_splash">splash</string>
+    <string name="title_activity_cadastro_produtos">CadastroProdutos</string>
 </resources>
