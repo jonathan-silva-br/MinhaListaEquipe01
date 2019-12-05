@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".splash"
-            android:label="splash"
+            android:label="MinhaLista"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
