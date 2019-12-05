@@ -1,15 +1,16 @@
 package br.com.equipe01.minhalista;
 
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
+import android.service.autofill.OnClickAction;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -17,7 +18,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
 import com.google.android.material.navigation.NavigationView;
 import android.view.Menu;
 import android.widget.Button;
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     //Variáveis que armazenarão os textviews do menu lateral
     public TextView nomeU;
     public TextView emailU;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
         loadData();
+
     }
 
     @Override
@@ -142,6 +144,15 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setBackgroundResource(R.drawable.animbutton);
         rocketAnimation = (AnimationDrawable) buttonAdd.getBackground();
     //
+    }
+
+
+    //Ação de click para abir a Activity de Cadastro de Novo Produto.
+    public void onClick(View view){
+        Intent cadastro = new Intent(this, CadastrarProdutos.class);
+        startActivity(cadastro);
+        finish();
+
     }
 
 }
