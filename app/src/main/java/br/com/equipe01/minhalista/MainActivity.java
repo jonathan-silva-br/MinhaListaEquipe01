@@ -3,11 +3,11 @@ package br.com.equipe01.minhalista;
 
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,21 +19,29 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
-import android.view.Menu;
-import android.widget.Button;
-import android.widget.ImageView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     public NavigationView navigationView;
+
     //Variável que armazenará o nome do usuário
     public static String nomeUsuario;
     AnimationDrawable rocketAnimation;
+
     //Variável que armazenará o email
     public static String emailUsuario;
+
     //Variáveis que armazenarão os textviews do menu lateral
     public TextView nomeU;
     public TextView emailU;
+
+    //Array com os produtos
+    public static List<String> listaProdutosSelecionados = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void animacaoBtn(View view) {
-        ImageView buttonAdd = (ImageView) findViewById(R.id.buttonadd);
+        Button buttonAdd =  findViewById(R.id.buttonadd);
         buttonAdd.setBackgroundResource(R.drawable.animbutton);
         rocketAnimation = (AnimationDrawable) buttonAdd.getBackground();
     //
