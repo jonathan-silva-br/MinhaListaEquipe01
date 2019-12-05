@@ -16,7 +16,9 @@ import br.com.equipe01.minhalista.R;
 
 public class ShareFragment extends Fragment {
 
-
+    public static Fragment newInstance(){
+        return new ShareFragment();
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
