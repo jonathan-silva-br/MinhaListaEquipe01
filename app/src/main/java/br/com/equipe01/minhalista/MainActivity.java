@@ -71,6 +71,28 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    /**
+     *
+     *  Ação de guardar informações nos TextViews
+     *
+     * Através do NavController, temos acesso aos ids dos componentes que
+     * estão dentro da nav_host_fragment.xml que possui acesso à todas os
+     * fragmentos através do mobile_navigation.xml.
+     *
+     * Temos duas variáveis globais que são os TextViews que eu desejo
+     * alterar com as informações do usuário. Logo após pegar o id de cada
+     * TextView, setamos o textviews com as informações das variáveis
+     * globais que foram instanciadas no começo da Classe.
+     *
+     * Depois de fazer as alterações, é chamado o método saveData() que
+     * realiza o salvamento dos dados que o usuário digitou.
+     *
+     *
+     * @author Matheus Vinícius <matheusgeiser@gmail.com>
+     *
+     * @return
+     */
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -94,9 +116,14 @@ public class MainActivity extends AppCompatActivity {
      *
      * Através de SharedPreferences armazena as informações de nome e email
      * para que essas não se percam ao reiniciar o aplicativo
+     * Intanciando o SharedPreferences e logo após iniciando o editor
+     * para que possa ser possível inserir os dados que serão guardados.
      *
      *
-     * return void
+     *
+     * @author Matheus Vinícius <matheusgeiser@gmail.com>
+     *
+     * @return void
      *
      */
 
@@ -116,9 +143,14 @@ public class MainActivity extends AppCompatActivity {
      *
      * Método que carrega os dados salvos do usuário
      *
-     * Através de SharedPreferences, recupera os dados salvados anteriormente no método saveData()
+     * Através de SharedPreferences, recupera os dados salvados anteriormente
+     * no método saveData() e armazena os valores do sharedPreferences dentro
+     * das variáveis globais nomeUsuario e emailUsuario que foram
+     * criadas no início da classe
      *
-     * return void
+     * @author Matheus Vinícius <matheusgeiser@gmail.com>
+     *
+     * @return void
      *
      */
 

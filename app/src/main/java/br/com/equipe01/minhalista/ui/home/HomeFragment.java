@@ -20,6 +20,23 @@ import java.util.List;
 import br.com.equipe01.minhalista.MainActivity;
 import br.com.equipe01.minhalista.R;
 
+/**
+ *
+ *   Classe do fragmento principal que possui a lista com os produtos
+ *
+ *   Dentro dessa classe, temos a classe que extende o fragmento Home
+ * que é a parte principal onde tem as listas com os produtos.
+ * Possuindo uma forma de marcar a linha clicada para melhor entendimento
+ * do usuário. Dentro do XML temos dois botões, um para adicionar novos
+ * produtos e outro para adicionar os produtos selecionados dentro
+ * da lista.
+ *
+ *
+ * @author          Matheus Vinícius <matheusgeiser@gmail.com>
+ *
+ */
+
+
 public class HomeFragment extends Fragment {
 
     //Botão de adicionar produtos ao array da Main
@@ -46,6 +63,8 @@ public class HomeFragment extends Fragment {
      *  Botão que adiciona os produtos selecionados à lista da MainActivity para ser utilizada
      *  em outro fragmento
      *
+     *
+     * @author Matheus Vinícius <matheusgeiser@gmail.com>
      *
      * @param inflater
      * @param container
@@ -117,12 +136,14 @@ public class HomeFragment extends Fragment {
 
         add = root.findViewById(R.id.buttonadd);
 
+        //Ação do botão que adiciona os produtos à lista
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                List<String> listMain = MainActivity.listaProdutosSelecionados;
+                List<String> listMain = MainActivity.listaProdutosSelecionados; //Array com as informações dos produtos que já foram selecionados
 
+                //Verificação
                 for(int j = 0; j < listaProdutos.size(); j++){
 
                     if(listMain.size() == 0){
@@ -145,6 +166,8 @@ public class HomeFragment extends Fragment {
                 }
 
 
+                //Laço que pinta de branco todas as views dentro do ListView
+                //
                 for(int i = 0; i < lvProdutos.getChildCount(); i++){
 
                     View viewPintada =  lvProdutos.getChildAt(i);

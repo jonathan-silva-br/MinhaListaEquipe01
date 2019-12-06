@@ -9,7 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+
+import br.com.equipe01.minhalista.ui.home.HomeFragment;
 
 public class CadastrarProdutos extends AppCompatActivity {
 
@@ -19,6 +23,8 @@ public class CadastrarProdutos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_produtos);
         Toolbar toolbar = findViewById(R.id.toolbar);
+
+
     }
 }
 
