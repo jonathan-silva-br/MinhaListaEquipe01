@@ -1,27 +1,21 @@
 package br.com.equipe01.minhalista;
-
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.service.autofill.OnClickAction;
 import android.util.Log;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.navigation.NavigationView;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -181,12 +175,15 @@ public class MainActivity extends AppCompatActivity {
     //
     }
 
+    /**
+     * Método de chamada para ação de clicar em um botão.
+     * Esse método onClick inicia a Activity CadastrarProdutos através de uma new Intent.   *
+     * @author  Jonathan Silva <>silva_jonathan@outlook.com.br</>
+     */
 
-    //Ação de click para abir a Activity de Cadastro de Novo Produto.
     public void onClick(View view){
         Intent cadastro = new Intent(this, CadastrarProdutos.class);
         startActivity(cadastro);
-       
     }
 
 }
