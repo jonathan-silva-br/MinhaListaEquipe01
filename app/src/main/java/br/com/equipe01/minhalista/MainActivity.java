@@ -1,27 +1,21 @@
 package br.com.equipe01.minhalista;
-
-
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.service.autofill.OnClickAction;
 import android.util.Log;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
 import com.google.android.material.navigation.NavigationView;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     //Variáveis que armazenarão os textviews do menu lateral
     public TextView nomeU;
     public TextView emailU;
+    
 
     //Array com os produtos
     public static List<String> listaProdutosSelecionados = new ArrayList<>();
@@ -67,8 +62,31 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
         loadData();
+
     }
 
+
+    /**
+     *
+     *  Ação de guardar informações nos TextViews
+     *
+     * Através do NavController, temos acesso aos ids dos componentes que
+     * estão dentro da nav_host_fragment.xml que possui acesso à todas os
+     * fragmentos através do mobile_navigation.xml.
+     *
+     * Temos duas variáveis globais que são os TextViews que eu desejo
+     * alterar com as informações do usuário. Logo após pegar o id de cada
+     * TextView, setamos o textviews com as informações das variáveis
+     * globais que foram instanciadas no começo da Classe.
+     *
+     * Depois de fazer as alterações, é chamado o método saveData() que
+     * realiza o salvamento dos dados que o usuário digitou.
+     *
+     *
+     * @author Matheus Vinícius <matheusgeiser@gmail.com>
+     *
+     * @return
+     */
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -92,9 +110,14 @@ public class MainActivity extends AppCompatActivity {
      *
      * Através de SharedPreferences armazena as informações de nome e email
      * para que essas não se percam ao reiniciar o aplicativo
+     * Intanciando o SharedPreferences e logo após iniciando o editor
+     * para que possa ser possível inserir os dados que serão guardados.
      *
      *
-     * return void
+     *
+     * @author Matheus Vinícius <matheusgeiser@gmail.com>
+     *
+     * @return void
      *
      */
 
@@ -114,9 +137,14 @@ public class MainActivity extends AppCompatActivity {
      *
      * Método que carrega os dados salvos do usuário
      *
-     * Através de SharedPreferences, recupera os dados salvados anteriormente no método saveData()
+     * Através de SharedPreferences, recupera os dados salvados anteriormente
+     * no método saveData() e armazena os valores do sharedPreferences dentro
+     * das variáveis globais nomeUsuario e emailUsuario que foram
+     * criadas no início da classe
      *
-     * return void
+     * @author Matheus Vinícius <matheusgeiser@gmail.com>
+     *
+     * @return void
      *
      */
 
@@ -149,6 +177,17 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setBackgroundResource(R.drawable.animbutton);
         rocketAnimation = (AnimationDrawable) buttonAdd.getBackground();
 
+    }
+
+    /**
+     * Método de chamada para ação de clicar em um botão.
+     * Esse método onClick inicia a Activity CadastrarProdutos através de uma new Intent.   *
+     * @author  Jonathan Silva <>silva_jonathan@outlook.com.br</>
+     */
+
+    public void onClick(View view){
+        Intent cadastro = new Intent(this, CadastrarProdutos.class);
+        startActivity(cadastro);
     }
 
 }

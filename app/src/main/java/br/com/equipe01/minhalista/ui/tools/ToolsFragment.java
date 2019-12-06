@@ -15,11 +15,56 @@ import androidx.fragment.app.Fragment;
 import br.com.equipe01.minhalista.MainActivity;
 import br.com.equipe01.minhalista.R;
 
+
+/**
+ *
+ *  Classe do fragmento do usuário que contem todas as funcionalidades da tela
+ *
+ * Essa classe é a responsável pelas funcionalidades dos elementos que estão
+ * no XML, contendo captura de dados dos EditTexts e a ação do botão que
+ * altera os dados das variáveis globais da MainActivity para os dados
+ * que o usuário digitou nos campos de input
+ *
+ * @author Matheus Vinícius <matheusgeiser@gmail.com>
+ *
+ */
+
 public class ToolsFragment extends Fragment {
 
     EditText txtNome;
     EditText txtEmail;
     Button btnDados;
+
+
+    /**
+     *
+     *  Método que contém todas as ações da tela do usuário
+     *
+     *  Logo ao criar a View, ele infla na tela o xml do fragmento,
+     *  depois pega os componentes que estão dentro do xml para realizar
+     *  as alterações.
+     *
+     *  Logo temos uma verificação para ver se é a primeira vez que o usuário
+     *  entra nesta tela, pois o valor padrão da variável que está na
+     *  MainActivity, pois se não for igual ao valor que está na Main, então
+     *  o nome do botão é alterado e o hint (placeholder) do EditText
+     *  recebe os valores que estão salvos.
+     *
+     *  Logo depois temos a ação do botão que atribui as informações dos campos
+     *  para as variáveis. Guardando o valor dos inputs dentro de variáveis e
+     *  verificando se o campo está sem caracteres para que a alteração não
+     *  ocorra caso os inputs estejam vazios. Se os campos não estiverem
+     *  vazios, a informação dos inputs são enviadas para as variáveis
+     *  globais que estão dentro da Main, que são puxadas para o TextView
+     *  do menu lateral.
+     *
+     *
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

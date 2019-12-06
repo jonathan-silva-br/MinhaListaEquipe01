@@ -18,7 +18,6 @@ public class NovoProduto extends AppCompatActivity {
         setContentView(R.layout.activity_cadastrar_produtos);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
     }
 
 }
