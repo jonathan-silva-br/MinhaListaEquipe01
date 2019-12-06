@@ -63,6 +63,9 @@ public class HomeFragment extends Fragment {
      *  Botão que adiciona os produtos selecionados à lista da MainActivity para ser utilizada
      *  em outro fragmento
      *
+     *  -- Ainda falta fazer com que ao adicionar um produto, ele atualizar na
+     *  tela de forma dinâmica
+     *
      *
      * @author Matheus Vinícius <matheusgeiser@gmail.com>
      *
