@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
      * TODO Organizar as imagens da animação
      * TODO rever o metodo para passar de uma imagemView para outro
      * TODO Colocar outros métodos desse botão aqui
-     * 
+     *
      * @author Eduarda <eduarda.jen@gmail.com>
      *
      * @param view
