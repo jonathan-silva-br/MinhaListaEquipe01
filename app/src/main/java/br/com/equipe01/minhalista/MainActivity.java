@@ -154,8 +154,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view){
         Intent cadastro = new Intent(this, CadastrarProdutos.class);
         startActivity(cadastro);
-        finish();
-
+       
     }
 
 }
