@@ -22,9 +22,9 @@ public class SendFragment extends Fragment {
      * @param container
      * @param savedInstanceState
      *
-     * @return root
+     *@author Eduarda <eduarda.jen@gmail.com>
      *
-     * @author Eduarda <eduarda.jen@gmail.com>
+     * @return root
      *
      */
 

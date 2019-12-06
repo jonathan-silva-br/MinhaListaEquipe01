@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 /**
  * Classe para a splash screen
  * Colocando todos os métodos que vou ultilizar na activity
+ *
  * @author  Eduarda <eduarda.jen@gmail.com>
  */
 public class splash extends AppCompatActivity {

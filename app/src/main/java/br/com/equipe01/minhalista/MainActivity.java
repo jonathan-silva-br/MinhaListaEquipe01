@@ -170,6 +170,8 @@ public class MainActivity extends AppCompatActivity {
      * TODO rever o metodo para passar de uma imagemView para outro
      * TODO Colocar outros métodos desse botão aqui
      * 
+     * @author Eduarda <eduarda.jen@gmail.com>
+     *
      * @param view
      */
     public void animacaoBtn(View view) {
