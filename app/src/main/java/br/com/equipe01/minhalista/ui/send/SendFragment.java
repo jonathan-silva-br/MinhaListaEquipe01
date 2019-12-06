@@ -16,7 +16,17 @@ import br.com.equipe01.minhalista.R;
 
 public class SendFragment extends Fragment {
 
-
+    /**
+     * Criando fragemnto para tela ajuda
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     *
+     * @return root
+     *
+     * @author Eduarda <eduarda.jen@gmail.com>
+     *
+     */
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

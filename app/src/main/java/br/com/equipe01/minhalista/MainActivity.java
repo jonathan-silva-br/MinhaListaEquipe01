@@ -134,17 +134,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**Animação do botão
-     * Qualquer ação de click no botão devera se feito nessa public
-     * o botão buttonadd agora é uma image view
-     *
-     *
+     * Inflando o botão
+     * O botão buttonadd agora é uma imageView
+     * Qunado o botão ser clicado dará start na animação
+     * As ações do botão deveram ser feitas a parti deste método
+     * TODO Organizar as imagens da animação
+     * TODO rever o metodo para passar de uma imagemView para outro
+     * TODO Colocar outros métodos desse botão aqui
+     * 
      * @param view
      */
     public void animacaoBtn(View view) {
         Button buttonAdd =  findViewById(R.id.buttonadd);
         buttonAdd.setBackgroundResource(R.drawable.animbutton);
         rocketAnimation = (AnimationDrawable) buttonAdd.getBackground();
-    //
+
     }
 
 }

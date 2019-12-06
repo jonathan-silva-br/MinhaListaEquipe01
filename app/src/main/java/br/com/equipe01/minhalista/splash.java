@@ -11,11 +11,23 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Classe para a splash screen
+ * Colocando todos os métodos que vou ultilizar na activity
+ * @author  Eduarda <eduarda.jen@gmail.com>
+ */
 public class splash extends AppCompatActivity {
     Animation letras;
     ImageView principal;
     TextView titulo;
 
+    /**
+     * Está criando uma nova Activity para implementar a Splash Screen
+     * @param savedInstanceState
+     * @return void
+     * @author  Eduarda <eduarda.jen@gmail.com>
+     *
+     */
 
 
         @Override
@@ -29,7 +41,15 @@ public class splash extends AppCompatActivity {
 
         }
 
-        //Metodo que inicia a main activity depois da splash
+    /**
+     * Inicia a main activity após o surgimento da splash sreen
+     *
+     * Utilizando a intent para iniciar a main activity.
+     *
+     * @return void
+     *
+     *
+     */
         private void mostrarMainActivity() {
             Intent intent = new Intent(
                 splash.this, MainActivity.class
@@ -39,8 +59,18 @@ public class splash extends AppCompatActivity {
 
         }
 
-        //Splash screen
-        private void mostrarSplash(int delay) {
+    /**
+     * Mostrando a splash screen
+     *
+     * Chamando a animacao do titulo
+     * Ultilizando O Handler para fazer um encadeamento de Menssagem/Metodo
+     * Ultilizando o Runnable para iniciar outra tarefa, no caso Mostra a MainActivity
+     *
+     *
+     * @param delay - Determina o tempo que a Activity sera executada
+     * @return void
+     */
+    private void mostrarSplash(int delay) {
 
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
@@ -54,32 +84,27 @@ public class splash extends AppCompatActivity {
 
 
         }
-    //Metodo que guarda a informação de que o aplicativo ja foi aberto outras vezes
 
-    private void adicionarPreferenceJaAbriu(SharedPreferences preferences) {
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putBoolean("open", true);
-        editor.commit();
-    }
-    //Iniciando animação Aparecer o titulo
+
+
+    /**Iniciando animação "Aparecer o titulo"
+     * Está inflando o textView na tela e dando start na animacao
+     * @return void
+     */
+
     private void animationSplash() {
         titulo = findViewById(R.id.titulo);
         Animation AparecerTitulo = AnimationUtils.loadAnimation(this, R.anim.letras);
         titulo.startAnimation(AparecerTitulo);
 
     }
-//Metodo que inicia a splash com o delay determinado;
-    //Se o aplicativo nunca foi aberto o delay é maior
 
+    /** Determinando o tempo de delay
+     * @return void
+     */
     private void delaySplash(){
 
-        SharedPreferences preferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
+        mostrarSplash(1500);
 
-        if (preferences.contains("open")) {
-            mostrarSplash(1500);
-        } else {
-            adicionarPreferenceJaAbriu(preferences);
-            mostrarSplash(2000);
         }
     }
-}
